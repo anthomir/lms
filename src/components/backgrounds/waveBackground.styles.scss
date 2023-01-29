@@ -1,0 +1,53 @@
+@use "../scss/abstracts/" as *;
+@use "../scss/base/" as *;
+
+.wave__wrapper {
+  position: relative;
+
+  .hero__background {
+    background: linear-gradient(189.16deg, #5e2dff 13.57%, #815bff 98.38%);
+
+    position: absolute;
+    width: 100vw;
+    height: 100rem;
+    z-index: -1;
+    overflow: hidden;
+
+    @include responsive(desktopLarge) {
+      height: 90rem;
+    }
+
+    @include responsive(tabletPortrait) {
+      width: 100vw;
+      height: 120rem;
+    }
+  }
+
+  .wave {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+
+    @include responsive(tabletPortrait) {
+      display: none;
+    }
+
+    &--1 {
+      top: 14rem;
+      filter: blur(4rem);
+    }
+
+    &--2 {
+      top: 35rem;
+      filter: blur(3rem);
+    }
+
+    &--3 {
+      top: 65rem;
+
+      @include responsive(desktopLarge) {
+        top: 60rem;
+      }
+    }
+  }
+}

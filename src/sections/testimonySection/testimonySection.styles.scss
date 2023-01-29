@@ -1,0 +1,223 @@
+@use "../../components/scss/abstracts/" as *;
+@use "../../components/scss/base/" as *;
+
+.testimony {
+  &__user {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+    color: #f2f6ff;
+
+    @include responsive(tabletLandscape) {
+      grid-template-columns: auto;
+      gap: 5rem;
+    }
+
+    @include responsive(tabletPortrait) {
+      padding: 4rem 0;
+    }
+
+    @include responsive(mobile) {
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__userCard {
+    width: 340px;
+    height: 251px;
+    background: rgba(15, 14, 71, 0.5);
+    box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 2.8rem 2rem;
+    display: grid;
+
+    @include responsive(desktopLarge) {
+      padding: 1.5rem 2rem;
+    }
+
+    @include responsive(tabletPortrait) {
+      transform: scale(0.9);
+    }
+
+    &--3 {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 3rem 0;
+
+      @include responsive(desktopLarge) {
+        padding: 2rem 2rem;
+        gap: 2rem;
+      }
+
+      @include responsive(tabletLandscape) {
+        backdrop-filter: blur(0);
+        width: 60rem;
+        text-align: center;
+      }
+      @include responsive(mobile) {
+        width: 100%;
+        padding: 0 5rem;
+        align-items: center;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .user__detail {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    // margin-bottom: -1rem;
+
+    &--image {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+
+      &-1 {
+        background-image: url("../../assets/avatars/Mir.jpg");
+      }
+
+      &-2 {
+        background-image: url("../../assets/avatars/harsh.jpg");
+      }
+    }
+
+    &--name {
+      font-size: 1.8rem;
+      margin-left: 0.8rem;
+      font-weight: 400;
+      @include responsive(tabletPortrait) {
+        font-size: 2.2rem;
+      }
+    }
+
+    &--job {
+      font-size: 1.4rem;
+      color: #ff9595;
+      margin-left: 0.8rem;
+
+      @include responsive(tabletPortrait) {
+        font-size: 1.8rem;
+      }
+    }
+
+    &--content {
+      font-size: 1.2rem;
+      line-height: 1.4;
+      margin-left: 0.8rem;
+
+      @include responsive(tabletPortrait) {
+        font-size: 1.6rem;
+      }
+    }
+
+    &--teamHeading {
+      margin-left: 0;
+      font-size: 1.6rem;
+    }
+
+    &--count {
+      font-size: 2.6rem;
+    }
+
+    &--info {
+      font-size: 1.4rem;
+      line-height: 1.6;
+      font-weight: 300;
+    }
+  }
+
+  &__companies {
+    max-width: 100rem;
+    margin: 0 auto;
+    margin-bottom: 12rem;
+    display: none;
+
+    @include responsive(tabletLandscape) {
+      transform: scale(0.8);
+    }
+  }
+
+  &__who {
+    @include responsive(tabletLandscape) {
+      display: none;
+    }
+
+    .who__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      max-width: 46rem;
+      margin: 0 auto;
+
+      &--title {
+        font-size: 1.8rem;
+      }
+
+      &--subtitle {
+        font-size: 4rem;
+        color: #f2f6ff;
+      }
+
+      &--content {
+        font-size: 1.7rem;
+        text-align: center;
+        line-height: 1.6;
+        color: #f2f6ff;
+      }
+    }
+  }
+
+  &__instructor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    max-width: 140rem;
+    margin: 0 auto;
+    padding: 10rem 0;
+
+    @include responsive(tabletLandscape) {
+      transform: scale(0.8);
+      grid-template-columns: auto;
+      gap: 5rem;
+    }
+
+    &--1,
+    &--2 {
+      width: 616px;
+      height: 400px;
+      border: 0.5px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(20px);
+      border-radius: 20px;
+
+      @include responsive(desktopLarge) {
+        transform: scale(0.9);
+      }
+    }
+
+    &--1 {
+      background: url("../../assets/animations/Sai-Card.svg"),
+        rgba(15, 14, 71, 0.3);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--2 {
+      background: url("../../assets/animations/Robin-Card.svg"),
+        rgba(15, 14, 71, 0.3);
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

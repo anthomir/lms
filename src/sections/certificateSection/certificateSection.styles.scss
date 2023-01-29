@@ -1,0 +1,271 @@
+@use "../../components/scss/abstracts/" as *;
+@use "../../components/scss/base/" as *;
+
+.certificate-background {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.certificate-section {
+  margin: 0 auto;
+}
+
+.certificate {
+  max-width: 140rem;
+  display: grid;
+  grid-template-columns: 64rem auto;
+  margin: 0 auto;
+  gap: 18rem;
+  padding: 18rem 0;
+
+  @include responsive(tabletLandscape) {
+    gap: 2rem;
+  }
+
+  color: #f2f6ff;
+
+  @include responsive(tabletLandscape) {
+    grid-template-columns: auto;
+    justify-content: center;
+    grid-column: 2 / 3;
+  }
+
+  @include responsive(tabletPortrait) {
+    max-width: 100%;
+    padding: 8rem 0;
+  }
+
+  @include responsive(mobile) {
+    max-width: 100%;
+  }
+
+  .certificateCard__wrapper {
+    position: relative;
+    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:hover {
+      transform: rotateY(-30deg);
+    }
+
+    @include responsive(tabletLandscape) {
+      height: 28rem;
+    }
+
+    @include responsive(tabletPortrait) {
+      transform: scale(0.9);
+    }
+
+    @include responsive(mobile) {
+      transform: scale(0.7);
+    }
+  }
+
+  .card__wrapper {
+    padding: 2rem;
+    position: absolute;
+    transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &--logo {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    &:hover {
+      transform: translateY(-2rem);
+    }
+
+    &--top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    &--down {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--card1 {
+      @include responsive(tabletLandscape) {
+        // left: -8rem;
+        top: -4rem;
+      }
+
+      width: 33.5rem;
+      height: 22rem;
+      bottom: 5rem;
+      left: 8rem;
+      right: 0%;
+      z-index: -6;
+      background: radial-gradient(
+          218.51% 281.09% at 100% 100%,
+          rgba(253, 63, 51, 0.6) 0%,
+          rgba(76, 0, 200, 0.6) 45.83%,
+          rgba(76, 0, 200, 0.6) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      border: 0.5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 30px 60px rgba(39, 77, 153, 0.2);
+      backdrop-filter: blur(20px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 30px;
+    }
+    &--card2 {
+      // @include responsive(tabletLandscape) {
+      //   left: -2rem;
+      //   top: -3rem;
+      // }
+
+      top: -2.2rem;
+      left: 18rem;
+      width: 31.5rem;
+      height: 22rem;
+      z-index: -7;
+      background: radial-gradient(
+          100% 128.38% at 100% 100%,
+          rgba(51, 168, 253, 0.2) 0%,
+          rgba(76, 0, 200, 0.2) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      border: 0.5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 30px 60px rgba(39, 77, 153, 0.2);
+      backdrop-filter: blur(20px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 30px;
+    }
+    &--card3 {
+      // @include responsive(tabletLandscape) {
+      //   left: 4rem;
+      //   top: -2rem;
+      // }
+
+      top: -1rem;
+      left: 28rem;
+      width: 29.5rem;
+      height: 22rem;
+
+      z-index: -8;
+      background: radial-gradient(
+          120% 154.37% at 100% 100%,
+          rgba(51, 253, 241, 0.1) 0%,
+          rgba(200, 96, 0, 0.1) 100%
+        )
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      border: 0.5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0px 30px 60px rgba(39, 77, 153, 0.2);
+      backdrop-filter: blur(20px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 30px;
+    }
+    &--card4 {
+      // @include responsive(tabletLandscape) {
+      //   left: 11rem;
+      //   top: 1rem;
+      // }
+
+      top: 1rem;
+      left: 38rem;
+      width: 26.818rem;
+      height: 20rem;
+      z-index: -9;
+      background: linear-gradient(
+        240.9deg,
+        rgba(255, 255, 255, 0.6) 0.04%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      border: 0.5px solid rgba(0, 0, 0, 0.2);
+      filter: drop-shadow(0px 30px 60px rgba(39, 77, 153, 0.1));
+      backdrop-filter: blur(20px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 27.2727px;
+    }
+  }
+
+  .certificate__textWrapper {
+    word-wrap: break-word;
+    display: grid;
+    gap: 2rem;
+    width: 40rem;
+
+    @include responsive(mobile) {
+      width: 30rem;
+    }
+
+    @include responsive(tabletLandscape) {
+      width: 80rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    &--title {
+      @include responsive(desktopLarge) {
+        font-size: 2rem;
+      }
+    }
+
+    &--heading {
+      font-weight: bold;
+      @include responsive(desktopLarge) {
+        font-size: 2.8rem;
+      }
+    }
+
+    &--description {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      @include responsive(desktopLarge) {
+        font-weight: 200;
+      }
+
+      @include responsive(tabletLandscape) {
+        width: 50rem;
+        line-height: 1.8;
+      }
+
+      @include responsive(mobile) {
+        max-width: 70%;
+      }
+      // font-weight: 200;
+    }
+
+    &--createAccount {
+      width: 183px;
+      height: 44px;
+
+      background: linear-gradient(
+        180deg,
+        rgba(24, 32, 79, 0.4) 0%,
+        rgba(24, 32, 79, 0.25) 100%
+      );
+      border: 0.5px solid rgba(0, 0, 0, 0.3);
+      box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(20px);
+      /* Note: backdrop-filter has minimal browser support */
+
+      border-radius: 30px;
+      color: #f2f6ff;
+      transition: 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+      &:hover {
+        transform: translateY(-0.5rem);
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+          0px 20px 40px rgba(23, 0, 102, 0.2),
+          inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}

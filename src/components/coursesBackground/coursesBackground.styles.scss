@@ -1,0 +1,26 @@
+@use "../scss/abstracts/" as *;
+@use "../scss/base/" as *;
+
+.couresesWave__wrapper {
+  position: relative;
+  width: 100vw;
+
+  .coursesWave {
+    position: absolute;
+    z-index: -4;
+    width: 100vw;
+  }
+
+  .coursesLines {
+    position: absolute;
+    width: 100%;
+    z-index: -3;
+    top: 5rem;
+
+    @include responsive(desktopLarge) {
+      top: -3rem;
+      left: -10rem;
+      width: 150%;
+    }
+  }
+}

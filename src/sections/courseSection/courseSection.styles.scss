@@ -1,0 +1,158 @@
+@use "../../components/scss/abstracts/" as *;
+@use "../../components/scss/base/" as *;
+
+.courses-background {
+  width: 100vw;
+}
+
+.courses {
+  max-width: 140rem;
+  margin: 0 auto;
+  padding: 10rem 0;
+
+  @include responsive(desktopLarge) {
+    padding: 6.5rem 0;
+  }
+
+  @include responsive(tabletLandscape) {
+    padding: 2rem 0;
+    max-width: 100rem;
+  }
+
+  @include responsive(tabletPortrait) {
+    max-width: 60rem;
+    margin: 0 auto;
+  }
+
+  @include responsive(mobile) {
+    max-width: 50rem;
+  }
+
+  &__description {
+    max-width: 140rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 45rem auto;
+    color: #f2f6ff;
+    align-items: end;
+    grid-gap: 8rem;
+
+    @include responsive(desktopLarge) {
+      max-width: 130rem;
+    }
+
+    @include responsive(tabletLandscape) {
+      grid-template-columns: auto;
+    }
+
+    @include responsive(tabletPortrait) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__heading {
+    @include responsive(tabletLandscape) {
+      &--br {
+        display: none;
+      }
+      margin: 0 auto;
+    }
+  }
+
+  &__txt {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: auto;
+
+    @include responsive(tabletLandscape) {
+      align-items: center;
+    }
+
+    @include responsive(tabletPortrait) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    @include responsive(tabletLandscape) {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    @include responsive(tabletPortrait) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5rem;
+    }
+  }
+
+  &__description {
+    font-size: 2.1rem;
+    font-weight: 200;
+    line-height: 1.4;
+
+    @include responsive(desktopLarge) {
+      font-size: 1.9rem;
+    }
+
+    @include responsive(mobile) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__logoWrapper {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2rem;
+  }
+
+  &__techLogo {
+    width: 4.3rem;
+    height: 4.3rem;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__input {
+    width: 204px;
+    height: 44px;
+
+    background: linear-gradient(
+      180deg,
+      rgba(99, 106, 150, 0.4) 0%,
+      rgba(182, 186, 214, 0.25) 100%
+    );
+    border: 0.5px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(20px);
+    border-radius: 30px;
+    z-index: 1;
+    padding: 0 5rem;
+    font-size: 1.8rem;
+  }
+
+  &__searchLens {
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  &__duration {
+    @include responsive(desktopLarge) {
+      margin-top: 10rem;
+    }
+
+    @include responsive(mobile) {
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
